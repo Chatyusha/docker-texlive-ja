@@ -19,6 +19,6 @@ env_path="$texliveroot/bin/$arch"
 env_manpath="$texliveroot/texmf-dist/doc/man"
 env_infopath="$texliveroot/texmf-dist/doc/info"
 
-(echo -n '$PATH:'; echo "$env_path") >> ~/.bashrc
-(echo -n '$MANPATH:'; echo "$env_manpath") >> ~/.bashrc
-(echo -n '$INFOPATH:'; echo "$env_infopath") >> ~/.bashrc
+(echo -n 'export PATH=$PATH:'; echo "$env_path") >> ~/.bashrc
+(echo -n 'export MANPATH=$MANPATH:'; echo "$env_manpath") >> ~/.bashrc
+(echo -n 'export INFOPATH=$INFOPATH:'; echo "$env_infopath") >> ~/.bashrc
