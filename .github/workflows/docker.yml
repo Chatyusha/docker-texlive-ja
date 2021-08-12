@@ -30,3 +30,17 @@ jobs:
             --push \
             --platform linux/arm64,linux/amd64 \
             -t ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:latest .
+            
+      - name: Build for x86_64
+        run: |
+          docker buildx build \
+            --push \
+            --platform linux/amd64 \
+            -t ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:latest.x86_64
+            
+      - name: Build for Arm64
+        run: |
+          docker buildx build \
+            --push \
+            --platform linux/arm64 \
+            -t ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:latest.arm64
