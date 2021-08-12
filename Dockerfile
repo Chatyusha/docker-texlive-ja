@@ -1,11 +1,7 @@
 FROM ubuntu
 
-RUN apt-get update
-RUN apt-get upgrade -y
 
-RUN apt install -y curl perl
-
-# install texlive
+# install texlive ubuntu
 WORKDIR /root
 COPY ./installer/ubuntu.sh /root/
 RUN chmod 755 ubuntu.sh
