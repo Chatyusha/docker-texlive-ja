@@ -3,7 +3,7 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt install -y curl neovim
+RUN apt install -y curl perl
 
 # install texlive
 WORKDIR /root

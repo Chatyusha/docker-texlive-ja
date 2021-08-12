@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# packages
-apt-get update
-apt-get upgrade -y
 apt-get install curl
 
 # download & install
