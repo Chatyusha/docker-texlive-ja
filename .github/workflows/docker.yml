@@ -54,7 +54,7 @@ jobs:
           docker buildx build \
             --push \
             --platform linux/amd64 \
-            -t ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:latest.x86_64
+            -t ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:latest.x86_64 .
             
   build_Arm64:
     name: build and publish for Arm64
