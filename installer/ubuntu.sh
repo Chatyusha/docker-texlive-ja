@@ -12,13 +12,14 @@ rm *.tar.gz
 cd install-tl-*
 echo "I" | ./install-tl -no-gui
 
-texliveroot=$(find /usr/local/texlive/ -maxdepth 1 | grep -e ".*[0-9]\{4\}")
+#texliveroot=$(find /usr/local/texlive/ -maxdepth 1 | grep -e ".*[0-9]\{4\}")
 arch="$(uname -i)-linux"
+year="$(date '+%Y')"
 
-env_path="$texliveroot/bin/$arch"
-env_manpath="$texliveroot/texmf-dist/doc/man"
-env_infopath="$texliveroot/texmf-dist/doc/info"
+#env_path="$texliveroot/bin/$arch"
+localbin_path="/usr/local/bin"
 
-(echo -n 'export PATH=$PATH:'; echo "$env_path") >> ~/.bashrc
-(echo -n 'export MANPATH=$MANPATH:'; echo "$env_manpath") >> ~/.bashrc
-(echo -n 'export INFOPATH=$INFOPATH:'; echo "$env_infopath") >> ~/.bashrc
+cd $localbin_path
+
+ls ../texlive/$year/bin/$arch | xargs -Ifile ln -s ../texlive/$year/bin/$arch/ file
+
