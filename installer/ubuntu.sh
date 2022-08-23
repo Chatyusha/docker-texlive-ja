@@ -21,5 +21,5 @@ localbin_path="/usr/local/bin"
 
 cd $localbin_path
 
-ls ../texlive/$year/bin/$arch | xargs -Ifile ln -s ../texlive/$year/bin/$arch/ file
+ls ../texlive/$year/bin/$arch | xargs -Ifile ln -s ../texlive/$year/bin/$arch/file file
 
