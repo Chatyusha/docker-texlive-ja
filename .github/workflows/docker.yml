@@ -27,8 +27,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
+          push: false
+          platforms: linux/amd64,linux/arm64
           tags: unicatflower/docker-texlive-ja:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
+          cache-from: type=registry,ref=unicatflower/docker-texlive-ja:buildcache
+          cache-to: type=registry,ref=unicatflower/docker-texlive-ja:buildcache,mode=max
