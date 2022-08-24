@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  Build Multi Architecture:
+  Build_Multi_Architecture:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +35,7 @@ jobs:
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  Build x86_64:
+  Build_x86_64:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
@@ -66,7 +66,7 @@ jobs:
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  Build arm64:
+  Build_arm64:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
