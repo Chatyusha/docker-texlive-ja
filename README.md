@@ -1,4 +1,4 @@
-# docker-latex
+# docker-texlive-ja
 
 ## Docker Hub
 
