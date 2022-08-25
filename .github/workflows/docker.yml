@@ -3,12 +3,9 @@ on:
   push:
     branches:
       - master
-      - build-cache
-      - debug
 jobs:
-
-  build:
-    name: build and publish
+  Build_Multi_Architecture:
+    name: buid and publish for linux/amd64 & linux/arm64
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -27,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: false
+          push: true
           platforms: linux/amd64,linux/arm64
           tags: unicatflower/docker-texlive-ja:latest
           cache-from: type=registry,ref=unicatflower/docker-texlive-ja:buildcache

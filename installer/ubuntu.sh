@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# requires
-apt-get update
-apt-get upgrade -y
-apt install -y curl perl
-
 # download & install
 curl -OL http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar xvf install-tl-unx.tar.gz

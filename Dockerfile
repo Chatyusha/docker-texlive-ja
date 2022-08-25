@@ -1,5 +1,9 @@
-FROM ubuntu
+FROM ubuntu:latest
 
+# requires
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt install -y curl perl
 
 # install texlive ubuntu
 WORKDIR /root
