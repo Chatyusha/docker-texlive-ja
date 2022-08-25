@@ -30,5 +30,3 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: unicatflower/docker-texlive-ja:test
-          cache-from: type=registry,ref=unicatflower/docker-texlive-ja:buildcache
-          cache-to: type=registry,ref=unicatflower/docker-texlive-ja:buildcache,mode=max
