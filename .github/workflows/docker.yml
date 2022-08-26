@@ -6,7 +6,7 @@ on:
 jobs:
   Build_Multi_Architecture:
     name: buid and publish for linux/amd64 & linux/arm64
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-raspberryPi 
     steps:
       - uses: actions/checkout@master
         
