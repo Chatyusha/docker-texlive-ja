@@ -22,5 +22,6 @@ jobs:
       - name: Build
         run: |
           docker buildx use lycoris
-          docker buildx build --cache-from ${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache \
+          docker buildx build ---cache-from ${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache \
+          -cache-to ${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache \
           --platform linux/amd64,linux/arm64 -t ${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache --push .
