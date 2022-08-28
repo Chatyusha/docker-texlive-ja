@@ -1,8 +1,16 @@
-FROM ubuntu:latest
+FROM ubuntu
 
-# install texlive ubuntu
-WORKDIR /root
-COPY ./installer/ubuntu.sh /root/
-RUN chmod 755 ubuntu.sh
-RUN ./ubuntu.sh
-RUN rm -rf /root/*
+RUN apt update && apt upgrade -y
+
+RUN apt install -y tzdata locales
+
+RUN locale-gen ja_JP.UTF-8
+
+ENV TZ Asia/Tokyo
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+
+RUN apt install texlive-fonts-extra \
+                texlive-fonts-recommended \
+                texlive-lang-cjk \
+                xdvik-ja -y
