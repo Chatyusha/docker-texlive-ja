@@ -5,7 +5,7 @@ on:
       - test/github
 jobs:
   Build:
-    runs-on: Sirius01
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
