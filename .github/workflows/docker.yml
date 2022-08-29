@@ -27,5 +27,5 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:cache
-          cache-from: type=registry,${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:cache
-          cache-to: type=registry,${{ secrets.DOCKER_USERNAME }}//docker-texlive-ja:cache,mode=max
+          cache-from: ${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:cache
+          cache-to: ${{ secrets.DOCKER_USERNAME }}//docker-texlive-ja:cache
