@@ -26,6 +26,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache
-          cache-from: type=registry,${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache
-          cache-to: type=registry,${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache,mode=max
+          tags: unicatflower/docker-texlive-ja:cache
+          cache-from: type=registry,unicatflower/docker-texlive-ja:cache
+          cache-to: type=registry,unicatflower/docker-texlive-ja:cache,mode=max
