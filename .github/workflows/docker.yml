@@ -21,3 +21,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Make Cache
+        uses: docker/build-push-action@v3
+          context: .
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache
+          cache-from: type=registry,ref=${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache
+          cache-to: type=registry,ref=${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache,mode=max
+
