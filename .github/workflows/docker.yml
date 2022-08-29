@@ -31,7 +31,7 @@ jobs:
           cache-from: type=registry,ref=${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache
           cache-to: type=registry,ref=${{secrets.DOCKER_USERNAME}}/docker-texlive-ja:cache,mode=max
 
-      - name: Make Cache
+      - name: Build and Push
         uses: docker/build-push-action@v3
           context: .
           push: true
