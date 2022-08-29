@@ -35,7 +35,7 @@ jobs:
           cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/docker-texlive-ja:cache
 
 
-  Build and Push:
+  Build-and-Push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
